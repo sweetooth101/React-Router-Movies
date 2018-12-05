@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import SavedList from './Movies/SavedList';
 import MovieList from './Movies/MovieList';
 import Movie from './Movies/Movie';
 
-export default class App extends Component {
+ export default class App extends Component {
   constructor() {
     super();
     this.state = {
@@ -16,6 +16,7 @@ export default class App extends Component {
     const savedList = this.state.savedList;
     savedList.push(movie);
     this.setState({ savedList });
+    
   };
 
   render() {
@@ -28,3 +29,4 @@ export default class App extends Component {
     );
   }
 }
+
